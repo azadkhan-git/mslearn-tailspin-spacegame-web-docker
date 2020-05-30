@@ -4,7 +4,6 @@ trigger:
 variables:
   buildConfiguration: 'Release'
 
-stages:
 - stage: 'Build'
   displayName: 'Build and push'
   jobs:  
@@ -24,8 +23,7 @@ stages:
         tags: |
           $(tag)
 
-
-    steps:
+    Steps:
     - task: UseDotNet@2
       displayName: 'Use .NET Core SDK $(dotnetSdkVersion)'
       inputs:
